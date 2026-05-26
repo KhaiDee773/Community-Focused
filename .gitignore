@@ -1,0 +1,240 @@
+# ============================================
+# Community Focused (CF) - .gitignore
+# ============================================
+# CRITICAL: This file prevents sensitive data from being committed to Git
+# ============================================
+
+# ============================================
+# ENVIRONMENT & SECRETS (MOST IMPORTANT!)
+# ============================================
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Environment configuration files
+*.env
+**/.env
+**/.env.*
+
+# API Keys and secrets
+secrets/
+config/secrets.*
+*.pem
+*.key
+*.cert
+
+# ============================================
+# Node & NPM
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package manager lock files (optional - team preference)
+# package-lock.json
+# yarn.lock
+
+# ============================================
+# React Native
+# ============================================
+# Metro bundler
+.metro-health-check*
+
+# Build folders
+build/
+dist/
+*.jsbundle
+
+# React Native CLI
+.react-native/
+
+# ============================================
+# iOS
+# ============================================
+ios/Pods/
+ios/build/
+ios/*.xcworkspace
+ios/*.xcuserstate
+ios/*.xcuserdatad/
+ios/Podfile.lock
+ios/.xcode.env.local
+
+# CocoaPods
+*.xcworkspace
+xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# ============================================
+# Android
+# ============================================
+android/app/build/
+android/build/
+android/.gradle/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+*.apk
+*.aab
+
+# Android Studio
+.idea/
+.gradle/
+local.properties
+*.iml
+*.hprof
+
+# NDK
+obj/
+
+# ============================================
+# Expo (if used)
+# ============================================
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# ============================================
+# Testing
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+
+# Jest
+jest/
+.jest/
+
+# ============================================
+# IDE & Editors
+# ============================================
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================
+# OS Files
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ============================================
+# Logs
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ============================================
+# Temporary Files
+# ============================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# ============================================
+# Database & Storage
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# Backup Files
+# ============================================
+*.bak
+*.backup
+*.old
+*~
+
+# ============================================
+# Media & Assets (Large Files)
+# ============================================
+# Uncomment if you want to exclude large media files
+# *.mp4
+# *.mov
+# *.avi
+# *.zip
+# *.tar.gz
+
+# ============================================
+# Generated Documentation
+# ============================================
+docs/generated/
+api-docs/
+
+# ============================================
+# Dependencies & Vendor
+# ============================================
+vendor/
+bower_components/
+
+# ============================================
+# Supabase Local
+# ============================================
+.supabase/
+
+# ============================================
+# Custom Exclusions
+# ============================================
+# Add any project-specific files here
+
+# ============================================
+# REMINDER: NEVER COMMIT THESE FILES!
+# ============================================
+# .env files contain:
+# - SUPABASE_URL
+# - SUPABASE_ANON_KEY
+# - ADMIN_PASSWORD
+# - API keys
+# - Secrets
+#
+# If you accidentally commit secrets:
+# 1. Remove from Git history immediately
+# 2. Rotate all exposed keys/passwords
+# 3. Use tools like git-secrets or gitleaks
+# ============================================
